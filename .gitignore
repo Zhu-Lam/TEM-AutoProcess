@@ -9,6 +9,8 @@ output.pptx
 # TEM image data (too large for git)
 Standard TEM Data/
 Planar TEM Data/
+standard/
+planar/
 
 # Python
 __pycache__/
