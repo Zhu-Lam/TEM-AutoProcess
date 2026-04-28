@@ -220,7 +220,7 @@ def generate_ppt(results, output_path):
                     Inches(x), Inches(y + img_h), Inches(img_w), Inches(label_h))
                 p2 = txBox2.text_frame.paragraphs[0]
                 p2.text = r["filename"]
-                p2.font.size = Pt(7)
+                p2.font.size = Pt(12)
                 p2.alignment = 1  # center
 
     os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
@@ -287,16 +287,16 @@ def main():
         print(f"ERROR: {root} is not a directory.")
         sys.exit(1)
 
-    # Auto-detect standard/ and planar/ subfolders (case-insensitive)
+    # Only match exact folder names: standard/ and planar/
     std_dir = pln_dir = None
     for name in os.listdir(root):
         full = os.path.join(root, name)
         if not os.path.isdir(full):
             continue
         low = name.lower()
-        if low == "standard" or low.startswith("standard"):
+        if low == "standard":
             std_dir = full
-        elif low == "planar" or low.startswith("planar"):
+        elif low == "planar":
             pln_dir = full
 
     if not std_dir and not pln_dir:
