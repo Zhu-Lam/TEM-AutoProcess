@@ -43,7 +43,7 @@ pip install python-pptx Pillow opencv-python-headless numpy
 建一个文件夹，里面放两个子文件夹：
 
 ```
-我的TEM数据/
+my_tem_data/
 ├── standard/       ← 放 Standard（截面）TEM 的 .tif 文件
 └── planar/         ← 放 Planar（平面）TEM 的 .tif 文件
 ```
@@ -58,10 +58,10 @@ pip install python-pptx Pillow opencv-python-headless numpy
 把 `tem_process.py` 放到任意位置，然后在 PowerShell 中运行：
 
 ```
-python tem_process.py 我的TEM数据
+python tem_process.py my_tem_data
 ```
 
-搞定！PPT 会自动保存为 `我的TEM数据/output.pptx`。
+搞定！PPT 会自动保存为 `my_tem_data/output.pptx`。
 
 ---
 
@@ -72,10 +72,10 @@ python tem_process.py 我的TEM数据
 python tem_process.py
 
 # 处理指定路径
-python tem_process.py "C:\Users\xxx\Desktop\TEM数据"
+python tem_process.py "C:\Users\xxx\Desktop\tem_data"
 
 # 指定输出文件名
-python tem_process.py 我的TEM数据 -o 报告.pptx
+python tem_process.py my_tem_data -o report.pptx
 ```
 
 ---
